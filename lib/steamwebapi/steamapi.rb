@@ -5,7 +5,7 @@ module SteamAPI
   def self.get(interface, method, version, args = {})
     json = true
     if args.empty?
-      raise 'Error: cannot retrieve data without arguments'
+      raise 'cannot retrieve data without arguments'
     else
       i = ''
       args.each do |key, value|

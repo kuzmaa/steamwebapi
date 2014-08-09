@@ -9,7 +9,6 @@ module SteamUser
   ## ISteamUser
   def self.summaries(steamids=[])
     args = {key: @key}
-
     unless steamids.empty?
       ids = ''
       steamids.each do |id|
@@ -17,7 +16,6 @@ module SteamUser
       end
       args[:steamids] = ids
     end
-
     SteamAPI.get('ISteamUser', 'GetPlayerSummaries', 'v0002', args)
   end
 
@@ -34,11 +32,9 @@ module SteamUser
 
   def self.global_stats(appid, count='1', name=[])
     args = {appid: appid, count: count}
-
     name.each do |v|
       args.merge!("name[#{name.index(v)}]" => v)
     end
-
     SteamAPI.get('ISteamUserStats', 'GetGlobalStatsForGame', 'v0001', args)
   end
 
