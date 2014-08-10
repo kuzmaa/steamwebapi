@@ -8,11 +8,6 @@ Steam Web API library in Ruby. Retrieves data from API server and parses it(JSON
 * http://steamcommunity.com/dev
 * https://developer.valvesoftware.com/wiki/Steam_Web_API
 
-
-## TODO
-
-* add a SteamID64 converter thingamajig so you don't have to use a user's SteamID64 only.
-
 ## Installation
 
 Open up your terminal or cmd or whatever and copypasta this code
