@@ -1,7 +1,7 @@
 Steam web API
 ===
 
-[![Gem Version](https://badge.fury.io/rb/steamwebapi@2x.png)](http://badge.fury.io/rb/steamwebapi)
+[![Gem Version](https://badge.fury.io/rb/steamwebapi.svg)](http://badge.fury.io/rb/steamwebapi)
 
 Steam Web API library in Ruby. Retrieves and parses JSON data. If you want more information about the API go to:
 
