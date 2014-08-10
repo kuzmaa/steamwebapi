@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "steamwebapi"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["kuzmaa"]
   spec.email         = [""]
   spec.summary       = %q{Steam Web API library in Ruby}
-  spec.description   = %q{Retrieves and parses JSON data, which it retrieves from http://api.steampowered.com}
+  spec.description   = %q{Retrieves and parses JSON data, which it gets from http://api.steampowered.com}
   spec.homepage      = "https://github.com/kuzmaa/steamwebapi"
   spec.license       = "MIT"
 

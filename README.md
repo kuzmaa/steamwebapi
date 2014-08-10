@@ -1,5 +1,7 @@
-Steamwebapi
+Steam web API
 ===
+
+[![Gem Version](https://badge.fury.io/rb/steamwebapi.svg)](http://badge.fury.io/rb/steamwebapi)
 
 Steam Web API library in Ruby. Retrieves and parses JSON data. If you want more information about the API go to:
 
@@ -15,11 +17,11 @@ Steam Web API library in Ruby. Retrieves and parses JSON data. If you want more 
 
 Open up your terminal or cmd or whatever and copypasta this code
 
-    $ gem install steamwebapi
+    gem install steamwebapi
 
 To use it in your application, add the following to your Gemfile:
 
-    gem 'steamwebapi'
+    gem 'steamwebapi', '~> 1.0.0'
 
 ## Usage
 

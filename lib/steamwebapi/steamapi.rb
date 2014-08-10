@@ -1,15 +1,16 @@
+# encoding: UTF-8
 require 'net/http'
 require 'json'
+require 'rexml/document'
 
 module SteamAPI
   def self.get(interface, method, version, args = {})
-    json = true
     if args.empty?
       raise 'cannot retrieve data without arguments'
     else
       i = ''
       args.each do |key, value|
-        # the first key needs ? in front of it
+        # the first argument needs ? in front of it
         if key == args.keys[0]
           i += "?#{key}=#{value}"
         else
@@ -19,10 +20,13 @@ module SteamAPI
       domain = "http://api.steampowered.com/#{interface}/#{method}/#{version}/#{i}"
     end
     uri = Net::HTTP.get(URI(domain))
-    if json
-      JSON.parse(uri)
+    case args.key('format')
+    when 'xml'
+      uri
+    when 'vdf'
+      uri
     else
-      raise 'data not in JSON format'
+      JSON.parse(uri)
     end
   end
 end
